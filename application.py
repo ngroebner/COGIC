@@ -234,7 +234,7 @@ controls = [
 basetext = html.Div([
     html.P([
         'Code for this page is available at ',
-        html.A('Github.', href='https://github.com/ngroebner/coviddashboard'),
+        html.A('Github.', href='https://github.com/ngroebner/COGIC'),
     ]),
     dcc.Markdown("""Case data are taken from the [Johns Hopkins 
         University Center for Systems Science and Engineering.]

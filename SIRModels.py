@@ -10,7 +10,7 @@ def doubling_time(y):
     x = np.arange(len(y))
     lny = np.log(y)#.replace([np.inf, -np.inf], np.nan).dropna()
     Td = np.log(2)/np.gradient(lny)
-    print(Td)
+
     #remove nan, inf, 0 values
     Td = np.delete(Td,np.where(Td==0))
     Td = Td[np.logical_not(np.isnan(Td))]

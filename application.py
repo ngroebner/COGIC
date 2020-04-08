@@ -56,7 +56,6 @@ uscountydata = loadCountyData()
 # list of counties
 # uscountylist[State] - > list of counties
 
-print(uscountydata['Minnesota']['Brown'])
 uscountylist = createCountyList(uscountydata)
 
 us_population = loadUSPopulation()

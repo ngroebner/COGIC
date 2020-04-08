@@ -35,7 +35,6 @@ class HospitalCensus:
         """Assumes 1/2 of admissions are ICU.
         This correction is already in the file.
         """
-        print(self.verityadmissions.values)
         return pd.Series(
             popstructure@self.verityadmissions.values,
             index=self.verityadmissions.columns

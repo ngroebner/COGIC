@@ -1,0 +1,21 @@
+virt/
+virt
+accesskeypair
+.ipynb_checkpoints
+__pycache__
+*.ipynb
+data/getstatedata.py 
+data/getHospitalPopulation.py 
+data/numc_population.csv 
+data/NUMC_pop_structure.csv 
+data/mn_population_structure2018_total.csv
+data/cdc-mort.csv
+
+.DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.ebextensions/*
+.ebignore

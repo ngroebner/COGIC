@@ -1,5 +1,5 @@
-virt/
-virt
+venv/
+venv
 accesskeypair
 .ipynb_checkpoints
 __pycache__

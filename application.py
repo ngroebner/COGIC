@@ -25,7 +25,7 @@ from hospCensusModels import HospitalCensus
 createcensus = HospitalCensus()
 
 theme = dbc.themes.FLATLY
-mathjax = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
+mathjax = 'https://cdnjs.cloudflare.com/ajax/libcds/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
 #app.scripts.append_script({ 'external_url' : mathjax })
 
 external_stylesheets = [theme, mathjax]

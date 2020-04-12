@@ -23,18 +23,15 @@ def loadStateData(t0='2020-03-10'):
     Returns a dataframe with multiindex columns.
     df[State][Confirmed/Infected/Deaths/Recovered]
     """
-    statedata = pd.read_csv('data/usStateData.csv')
-    statedata['Infected'] = (
-        statedata['Confirmed']
-        - (statedata['Recovered'] + statedata['Deaths'])
-    )
-    statedata = statedata.pivot(
-        index='Last_Update',
-        columns='Province/State',
-        values=['Confirmed', 'Infected', 'Deaths', 'Recovered']
+    df = pd.read_csv('https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv')
+    df.columns = ['date','State','fips','Confirmed','Deaths']
+    df = df.pivot(
+        index='date',
+        columns='State',
+        values=['Confirmed', 'Deaths']
     ).interpolate().fillna(0)
-    statedata = statedata.swaplevel(-2,-1, axis=1)
-    return statedata.loc[t0:]
+    df = df.swaplevel(-2,-1, axis=1)
+    return df.loc[t0:]
 
 def loadCountyData(t0='2020-03-10'):
     """Loads the current us state-level data on confirmed cases,

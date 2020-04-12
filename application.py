@@ -240,7 +240,6 @@ basetext = html.Div([
          (https://github.com/CSSEGISandData/COVID-19)"""),
     html.P('Demographic data is from 2018 US Census estimates.'),
     dcc.Markdown('&copy; Nate Groebner, 2020'),
-    html.P('Design CC BY-NC-SA'),
     html.P('Code GPL-3.0')
     ]
 )
